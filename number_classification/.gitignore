@@ -1,0 +1,53 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs and outputs
+*.log
+*.out
+*.err
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files (optional, keep if small & necessary)
+data/
+*.csv
+*.tsv
+*.json
+*.xml
+
+# Model checkpoints
+checkpoints/
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.joblib
+*.pkl
+
+# IDE/project settings
+.vscode/
+.idea/
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+
+# Temporary
+*.tmp
+*.bak
