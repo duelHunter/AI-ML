@@ -20,3 +20,10 @@ transform = transforms.Compose([
 
 - Just experimenting / toy project?
     - A simple (0.5, 0.5) works fine, which maps input values from [0,1] to [-1,1].
+
+
+
+# There’s a concept called gradient accumulation:
+
+- If your GPU can’t handle a big batch size, you can simulate it.
+- Example: instead of 128 in one go, you do 4 mini-batches of 32, then update weights once → equivalent to batch size 128.
