@@ -13,7 +13,7 @@ transform = transforms.Compose([
 ## Choosing Mean and Std
 
 - Using a pretrained model?
-    Use the exact mean/std values that the model was trained with (e.g., ImageNet: mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)).
+    - Use the exact mean/std values that the model was trained with (e.g., ImageNet: mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)).
 
 - Training from scratch on your own dataset?
     Compute the mean and std directly from your dataset (per channel).
