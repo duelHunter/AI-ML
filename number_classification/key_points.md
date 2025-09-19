@@ -111,16 +111,16 @@ An MLP treats pixels independently, as if pixel (5,5) has no relation to (5,6).
 
 - Structure: convolutional layers (nn.Conv2d) + pooling.
 - Input: keeps images in 2D grid form.
-  - Example: 1×28×28 (channel, height, width) for grayscale.
+    - Example: 1×28×28 (channel, height, width) for grayscale.
 
 - Works like: applies filters (kernels) that slide over the image to detect patterns.
 
 👉 Advantages:
-- Preserves spatial structure
+1. Preserves spatial structure
 - A filter can detect edges, corners, shapes.
 - Later layers combine these into higher-level features (like “loop of a 9”).
-- Parameter sharing
+2. Parameter sharing
 - Same filter slides across the image → fewer weights to learn than a fully connected MLP.
-- Translation invariance
+3. Translation invariance
 - If a digit moves slightly left/right, CNN can still detect it.
 - MLP would fail unless retrained with shifted examples.
