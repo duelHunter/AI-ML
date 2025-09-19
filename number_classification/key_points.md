@@ -90,3 +90,37 @@ transform = transforms.Compose([
 so that it can be fed into a Linear layer.
 This image describe it simply.
 ![Flattening](https://github.com/duelHunter/AI-ML/blob/main/number_classification/flattening_exmple.png)
+
+
+# Differene between MLP and CNN
+## 🔹 1. MLP (Multi-Layer Perceptron)
+
+- Structure: fully connected layers (nn.Linear).
+- Input: expects a flattened vector.
+- - Example: a 28×28 MNIST image → flattened into 784 features.
+
+- Works like: each neuron connects to every pixel, ignoring spatial structure.
+
+👉 Key issue:
+
+An MLP treats pixels independently, as if pixel (5,5) has no relation to (5,6).
+
+- This destroys spatial information (edges, shapes, textures).
+
+## 🔹 2. CNN (Convolutional Neural Network)
+
+- Structure: convolutional layers (nn.Conv2d) + pooling.
+- Input: keeps images in 2D grid form.
+- - Example: 1×28×28 (channel, height, width) for grayscale.
+
+- Works like: applies filters (kernels) that slide over the image to detect patterns.
+
+👉 Advantages:
+- Preserves spatial structure
+- A filter can detect edges, corners, shapes.
+- Later layers combine these into higher-level features (like “loop of a 9”).
+- Parameter sharing
+- Same filter slides across the image → fewer weights to learn than a fully connected MLP.
+- Translation invariance
+- If a digit moves slightly left/right, CNN can still detect it.
+- MLP would fail unless retrained with shifted examples.
