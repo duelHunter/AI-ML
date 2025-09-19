@@ -42,3 +42,28 @@ transform = transforms.Compose([
 3. Dropout layers
 - Dropout randomly turns off some neurons during training.
 - Different random masks → slightly different gradient updates.
+
+# Key techniques when designing image classifiers
+### (a) Architecture choice
+- MLP → simple tasks, small datasets (like MNIST).
+- CNN (Conv2D + Pooling) → standard for most image classification.
+- ResNet, EfficientNet, Vision Transformers → modern, scalable, state-of-the-art.
+
+### (b) Number of layers & neurons
+- More layers → higher capacity (can learn more complex patterns).
+- But too many → risk of overfitting (memorizing training set).
+- Rule of thumb: start small, then scale up if accuracy is low.
+
+### (c) Activation functions
+- ReLU is most common.
+- Others: LeakyReLU, GELU (used in Transformers).
+
+### (d) Regularization techniques
+- Dropout (like in your code): randomly zeroes some neurons.
+- Weight decay (L2 regularization): penalizes large weights.
+- Data augmentation: rotate, flip, crop, noise in images → makes model robust.
+
+### (e) Optimization
+- Use optimizers: SGD, Adam (most common), AdamW.
+- Learning rate is the most important hyperparameter.
+- Use learning rate schedulers (reduce LR over time).
