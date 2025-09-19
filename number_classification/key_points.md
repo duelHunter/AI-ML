@@ -97,7 +97,7 @@ This image describe it simply.
 
 - Structure: fully connected layers (nn.Linear).
 - Input: expects a flattened vector.
-- - Example: a 28×28 MNIST image → flattened into 784 features.
+    - Example: a 28×28 MNIST image → flattened into 784 features.
 
 - Works like: each neuron connects to every pixel, ignoring spatial structure.
 
@@ -117,10 +117,10 @@ An MLP treats pixels independently, as if pixel (5,5) has no relation to (5,6).
 
 👉 Advantages:
 1. Preserves spatial structure
-- A filter can detect edges, corners, shapes.
-- Later layers combine these into higher-level features (like “loop of a 9”).
+    - A filter can detect edges, corners, shapes.
+    - Later layers combine these into higher-level features (like “loop of a 9”).
 2. Parameter sharing
-- Same filter slides across the image → fewer weights to learn than a fully connected MLP.
+    - Same filter slides across the image → fewer weights to learn than a fully connected MLP.
 3. Translation invariance
-- If a digit moves slightly left/right, CNN can still detect it.
-- MLP would fail unless retrained with shifted examples.
+    - If a digit moves slightly left/right, CNN can still detect it.
+    - MLP would fail unless retrained with shifted examples.
