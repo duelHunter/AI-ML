@@ -67,3 +67,26 @@ transform = transforms.Compose([
 - Use optimizers: SGD, Adam (most common), AdamW.
 - Learning rate is the most important hyperparameter.
 - Use learning rate schedulers (reduce LR over time).
+
+
+# 🔹 What does Flatten do?
+
+### Images are usually stored as multi-dimensional tensors.
+- Example: MNIST image has shape
+```arduino
+[batch_size, channels, height, width]
+→ [64, 1, 28, 28]
+```
+
+(64 images in a batch, each grayscale 1×28×28).
+
+- Fully connected layers (nn.Linear) expect 1D vectors (like [batch_size, features]).
+
+👉 So, Flatten() reshapes each image from
+
+```arduino
+1 × 28 × 28   →   784 (28*28)  
+```
+so that it can be fed into a Linear layer.
+This image describe it simply.
+![Flattening](https://github.com/duelHunter/AI-ML/blob/main/number_classification/flattening_exmple.png)
